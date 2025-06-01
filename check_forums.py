@@ -87,7 +87,7 @@ def main():
         for url in sorted(current_active):
             f.write(url + "\n")
 
-    # Print results
+    # Console report
     print(f"\n✅ Live with posts ({len(live_with_posts)}):")
     for url in live_with_posts:
         print(f"  - {url}")
@@ -104,6 +104,11 @@ def main():
         print(f"\n🆕 Newly active forums ({len(new_active)}):")
         for url in new_active:
             print(f"  - {url}")
+    
+    if not current_active:
+        print("\n📁 No active forums found, but 'active_forums.txt' created as empty.")
+    else:
+        print(f"\n📁 'active_forums.txt' updated with {len(current_active)} active forums.")
 
 if __name__ == "__main__":
     main()

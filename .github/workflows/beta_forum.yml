@@ -28,6 +28,9 @@ jobs:
       - name: Run forum checker script
         run: python samsung_forum_checker.py
 
+      - name: Show script for debugging
+        run: echo "Checking Git commit block"
+
       - name: Commit updated README (if changed)
         run: |
           git config --global user.name "github-actions[bot]"

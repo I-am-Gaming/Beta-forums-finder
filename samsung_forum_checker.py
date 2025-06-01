@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-# Country & series setup
+# Define regions and series
 regions = {
     "eu": {
         "base_url": "https://eu.community.samsung.com/t5/{series}/ct-p/{country_code}-bp-{series_code}",
@@ -16,7 +16,7 @@ regions = {
         "country_codes": ["in"]
     },
     "us": {
-        "base_url": "https://us.community.samsung.com/t5/{series}/ct-p/{country_code}-bp-{series_code}",
+        "base_url": "https://us.community.samsung.com/t5/{series}/ct-p/{series_code}",
         "country_codes": ["us"]
     }
 }
@@ -38,14 +38,15 @@ def check_forum(url):
             if posts:
                 return "Live"
             else:
-                return "Live (No Posts)"
+                return "Live - No Posts"
         elif "core-node-not-found" in response.text:
-            return "Not available"
+            return "Not Found"
         else:
-            return "Error"
-    except Exception:
-        return "Error"
+            return f"Error {response.status_code}"
+    except Exception as e:
+        return f"Error: {str(e)}"
 
+# Collect results
 for region, config in regions.items():
     for code in config["country_codes"]:
         for key, info in series_info.items():
@@ -63,17 +64,17 @@ for region, config in regions.items():
                 "status": status
             })
 
-# Write summary to README.md
+# Write to README.md
 with open("README.md", "w", encoding="utf-8") as f:
-    f.write("# Samsung Beta Forums Status\n\n")
+    f.write("# Samsung Beta Forum Status\n\n")
     for r in results:
-        if r["status"] == "Live":
-            line = f"{r['series']}({r['country']}) ----> [Live]({r['url']})\n"
-        elif r["status"] == "Live (No Posts)":
-            # You can decide whether to hyperlink or not here; example below with hyperlink and "No Posts"
-            line = f"{r['series']}({r['country']}) ----> [Live (No Posts)]({r['url']})\n"
+        country_label = r["country"]
+        series = r["series"]
+        url = r["url"]
+        status = r["status"]
+        if "Live" in status:
+            f.write(f"- **{series} ({country_label})** → [Live]({url})\n")
         else:
-            line = f"{r['series']}({r['country']}) ----> Not available\n"
-        f.write(line)
+            f.write(f"- **{series} ({country_label})** → Not Available\n")
 
-print("README.md updated with forum status.")
+print("README.md updated.")

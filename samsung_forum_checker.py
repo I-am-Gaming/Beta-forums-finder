@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
+# Country & series setup
 regions = {
     "eu": {
         "base_url": "https://eu.community.samsung.com/t5/{series}/ct-p/{country_code}-bp-{series_code}",
@@ -15,7 +16,7 @@ regions = {
         "country_codes": ["in"]
     },
     "us": {
-        "base_url": "https://us.community.samsung.com/t5/{series_code}/ct-p/{series_code}",
+        "base_url": "https://us.community.samsung.com/t5/{series}/ct-p/{series_code}",
         "country_codes": ["us"]
     }
 }
@@ -26,31 +27,46 @@ series_info = {
     "S22": {"series": "S22-S22-S22-Ultra", "series_code": "stwentytwo"}
 }
 
+results = []
+
 def check_forum(url):
     try:
         response = requests.get(url, timeout=10)
         if response.status_code == 200:
-            if "core-node-not-found" in response.text.lower():
-                return "Not available"
+            if "core-node-not-found" in response.text:
+                return "Not Found"
             soup = BeautifulSoup(response.text, "html.parser")
-            if soup.select("div.message-subject"):
-                return f"[Live]({url})"
-            return f"[Live - No Posts]({url})"
-        return "Not available"
-    except:
-        return "Not available"
-
-readme_lines = ["# Samsung Beta Forums Status\n\n"]
+            posts = soup.select("div.message-subject")
+            return "Live" if posts else "Live - No Posts"
+        return f"Error {response.status_code}"
+    except Exception as e:
+        return f"Error: {str(e)}"
 
 for region, config in regions.items():
-    for country in config["country_codes"]:
-        for model, info in series_info.items():
-            if region == "us":
-                url = config["base_url"].format(series_code=info["series_code"])
-            else:
-                url = config["base_url"].format(series=info["series"], country_code=country, series_code=info["series_code"])
+    for code in config["country_codes"]:
+        for key, info in series_info.items():
+            url = config["base_url"].format(
+                series=info["series"],
+                country_code=code,
+                series_code=info["series_code"]
+            )
             status = check_forum(url)
-            readme_lines.append(f"{model} ({country.upper()}) ----> {status}\n")
+            results.append({
+                "series": key,
+                "region": region.upper(),
+                "country": code.upper(),
+                "url": url,
+                "status": status
+            })
 
+# Write to README.md
 with open("README.md", "w", encoding="utf-8") as f:
-    f.writelines(readme_lines)
+    f.write("# Samsung Beta Forum Status\n\n")
+    for r in results:
+        label = f"{r['series']} ({r['country']})"
+        if "Live" in r["status"]:
+            f.write(f"- **{label}** → [Live]({r['url']})\n")
+        else:
+            f.write(f"- **{label}** → Not available\n")
+
+print("README.md updated with live forum status.")

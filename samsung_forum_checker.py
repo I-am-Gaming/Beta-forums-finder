@@ -63,4 +63,7 @@ for region, config in regions.items():
 
 # Write to README.md
 with open("README.md", "w", encoding="utf-8") as f:
-    f.write("# Samsung Beta Forums Monitor\n\n
+    f.write("# Samsung Beta Forums Monitor\n\n")
+    f.write("\n".join(markdown_lines))
+
+print("README.md has been updated with latest forum statuses.")

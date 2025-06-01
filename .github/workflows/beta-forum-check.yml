@@ -41,5 +41,5 @@ jobs:
           else
             git add active_forums.txt
             git commit -m "Update active_forums.txt"
-            git push
+            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
           fi

@@ -27,19 +27,16 @@ series_info = {
     "S22": {"series": "S22-S22-S22-Ultra", "series_code": "stwentytwo"}
 }
 
-# Store results
-results = []
+# Store active results
+active_results = []
 
 def check_forum(url):
     try:
         response = requests.get(url, timeout=10)
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, "html.parser")
-            posts = soup.select("div.message-subject")  # Post titles
-            if posts:
-                return "Live - Has Posts"
-            else:
-                return "Live - No Posts"
+            posts = soup.select("div.message-subject")
+            return "Live - Has Posts" if posts else "Live - No Posts"
         elif "core-node-not-found" in response.text:
             return "Not Found"
         else:
@@ -47,7 +44,7 @@ def check_forum(url):
     except Exception as e:
         return f"Error: {str(e)}"
 
-# Loop through all regions, countries, and series
+# Loop through all forums
 for region, config in regions.items():
     for code in config["country_codes"]:
         for key, info in series_info.items():
@@ -57,20 +54,21 @@ for region, config in regions.items():
                 series_code=info["series_code"]
             )
             status = check_forum(url)
-            results.append({
-                "series": key,
-                "region": region.upper(),
-                "country": code.upper(),
-                "url": url,
-                "status": status
-            })
+            if "Live" in status:
+                active_results.append({
+                    "series": key,
+                    "region": region.upper(),
+                    "country": code.upper(),
+                    "url": url,
+                    "status": status
+                })
 
-# Write to file (always created)
+# Write only active forums to file
 with open("active_forums.txt", "w", encoding="utf-8") as f:
-    if results:
-        for r in results:
+    if active_results:
+        for r in active_results:
             f.write(f"[{r['region']}/{r['country']}/{r['series']}] {r['url']} --> {r['status']}\n")
     else:
-        f.write("No forums found.\n")
+        f.write("No active forums found.\n")
 
-print("Forum check completed.")
+print("Filtered forum check completed.")

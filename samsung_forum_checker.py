@@ -14,6 +14,10 @@ regions = {
     "in": {
         "base_url": "https://r2.community.samsung.com/t5/{series}/ct-p/{country_code}-bp-{series_code}",
         "country_codes": ["in"]
+    },
+    "us": {
+        "base_url": "https://us.community.samsung.com/t5/{series}/ct-p/{country_code}-bp-{series_code}",
+        "country_codes": ["us"]
     }
 }
 
@@ -23,6 +27,7 @@ series_info = {
     "S22": {"series": "S22-S22-S22-Ultra", "series_code": "stwentytwo"}
 }
 
+# Store results
 results = []
 
 def check_forum(url):
@@ -42,7 +47,7 @@ def check_forum(url):
     except Exception as e:
         return f"Error: {str(e)}"
 
-# Loop through all combinations and collect results
+# Loop through all regions, countries, and series
 for region, config in regions.items():
     for code in config["country_codes"]:
         for key, info in series_info.items():
@@ -60,18 +65,12 @@ for region, config in regions.items():
                 "status": status
             })
 
-# Filter only live forums (has posts or no posts)
-live_forums = [r for r in results if r['status'].startswith("Live")]
-
-# Sort live forums by region, country, then series
-live_forums.sort(key=lambda x: (x['region'], x['country'], x['series']))
-
-# Write live forums to file
+# Write to file (always created)
 with open("active_forums.txt", "w", encoding="utf-8") as f:
-    if live_forums:
-        for r in live_forums:
+    if results:
+        for r in results:
             f.write(f"[{r['region']}/{r['country']}/{r['series']}] {r['url']} --> {r['status']}\n")
     else:
-        f.write("No live forums found.\n")
+        f.write("No forums found.\n")
 
-print("Live forum check completed.")
+print("Forum check completed.")

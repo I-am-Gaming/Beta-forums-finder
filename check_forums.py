@@ -1,9 +1,9 @@
 import requests
 
 # Define base URL templates for different community domains and device series
-eu_base_url_template = "https://eu.community.samsung.com/t5/{series}/{country_code}-bp-{series_code}"
-kr_base_url_template = "https://r1.community.samsung.com/t5/{series}/{country_code}-bp-{series_code}"
-in_base_url_template = "https://r2.community.samsung.com/t5/{series}/{country_code}-bp-{series_code}"
+eu_base_url_template = "https://eu.community.samsung.com/t5/{series}/ct-p/{country_code}-bp-{series_code}"
+kr_base_url_template = "https://r1.community.samsung.com/t5/{series}/ct-p/{country_code}-bp-{series_code}"
+in_base_url_template = "https://r2.community.samsung.com/t5/{series}/ct-p/{country_code}-bp-{series_code}"
 
 # Device series info: URL path and series code for the beta forums
 device_series = {

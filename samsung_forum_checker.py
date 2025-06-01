@@ -16,8 +16,8 @@ regions = {
         "country_codes": ["in"]
     },
     "us": {
-        "base_url": "https://us.community.samsung.com/t5/{series}/ct-p/{series_code}",
-        "country_codes": ["us"]  # Special case for US
+        "base_url": "https://us.community.samsung.com/t5/{series}/ct-p/{country_code}-bp-{series_code}",
+        "country_codes": ["us"]
     }
 }
 
@@ -27,8 +27,8 @@ series_info = {
     "S22": {"series": "S22-S22-S22-Ultra", "series_code": "stwentytwo"}
 }
 
-# Store results
-results = []
+# Store markdown table rows
+markdown_lines = ["| Device | Region | Status |", "|--------|--------|--------|"]
 
 def check_forum(url):
     try:
@@ -36,10 +36,7 @@ def check_forum(url):
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, "html.parser")
             posts = soup.select("div.message-subject")
-            if posts:
-                return "Live - Has Posts"
-            else:
-                return "Live - No Posts"
+            return "Live - Has Posts" if posts else "Live - No Posts"
         elif "core-node-not-found" in response.text:
             return "Not Found"
         else:
@@ -51,29 +48,19 @@ def check_forum(url):
 for region, config in regions.items():
     for code in config["country_codes"]:
         for key, info in series_info.items():
-            if region == "us":
-                url = config["base_url"].format(series=info["series"], series_code=info["series_code"])
-            else:
-                url = config["base_url"].format(
-                    series=info["series"],
-                    country_code=code,
-                    series_code=info["series_code"]
-                )
+            url = config["base_url"].format(
+                series=info["series"],
+                country_code=code,
+                series_code=info["series_code"]
+            )
             status = check_forum(url)
-            results.append({
-                "series": key,
-                "region": region.upper(),
-                "country": code.lower(),
-                "url": url,
-                "status": status
-            })
+            region_label = code.upper()
 
-# Map countries for display
-def format_label(series, country):
-    country_map = {
-        "us": "US", "uk": "UK", "in": "IN", "kr": "KR", "de": "DE", "pl": "PL"
-    }
-    return f"{series} ({country_map.get(country.lower(), country.upper())})"
+            if status.startswith("Live"):
+                markdown_lines.append(f"| {key} | {region_label} | [Live]({url}) |")
+            else:
+                markdown_lines.append(f"| {key} | {region_label} | Not Available |")
 
 # Write to README.md
-with open("README.md", "w", encoding="utf-8")
+with open("README.md", "w", encoding="utf-8") as f:
+    f.write("# Samsung Beta Forums Monitor\n\n

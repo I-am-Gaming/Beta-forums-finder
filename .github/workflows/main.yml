@@ -1,31 +1,40 @@
-name: Samsung Beta Forums Monitor
+name: Check Samsung Beta Forums
 
 on:
-  workflow_dispatch:   # 👈 Manual run button
+  workflow_dispatch:  # Manual trigger
   schedule:
-    - cron: '30 2 * * *'
-    - cron: '30 6 * * *'
-    - cron: '30 10 * * *'
-    - cron: '30 12 * * *'
-    - cron: '30 16 * * *'
+    - cron: '40 2 * * *'   # 08:10 AM IST
+    - cron: '40 6 * * *'   # 12:10 PM IST
+    - cron: '40 10 * * *'  # 04:10 PM IST
+    - cron: '40 12 * * *'  # 06:10 PM IST
+    - cron: '40 16 * * *'  # 10:10 PM IST
 
 jobs:
   check-forums:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install requests
+      - name: Install dependencies
+        run: pip install requests
 
-    - name: Run forum checker
-      run: python ./check_forums.py
+      - name: Run forum checker
+        run: python samsung_forum_checker.py
+
+      - name: Commit updated file (if changed)
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet active_forums.txt; then
+            echo "No changes to commit."
+          else
+            git add active_forums.txt
+            git commit -m "Update active_forums.txt"
+            git push

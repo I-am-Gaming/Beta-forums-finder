@@ -28,18 +28,14 @@ jobs:
       - name: Run forum checker script
         run: python samsung_forum_checker.py
 
-      - name: List files (debug)
-        run: ls -la
-
-      - name: Commit updated file (if changed)
+      - name: Commit updated README (if changed)
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          if git diff --quiet active_forums.txt; then
+          if git diff --quiet README.md; then
             echo "No changes to commit."
           else
-            git add active_forums.txt
-            git commit -m "Update active_forums.txt"
-            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
-          fi
+            git add README.md
+            git commit -m "Update README.md with forum statuses"
+            git push

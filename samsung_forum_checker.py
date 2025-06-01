@@ -27,8 +27,7 @@ series_info = {
     "S22": {"series": "S22-S22-S22-Ultra", "series_code": "stwentytwo"}
 }
 
-# Store active results
-active_results = []
+results = []
 
 def check_forum(url):
     try:
@@ -36,15 +35,17 @@ def check_forum(url):
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, "html.parser")
             posts = soup.select("div.message-subject")
-            return "Live - Has Posts" if posts else "Live - No Posts"
+            if posts:
+                return "Live"
+            else:
+                return "Live (No Posts)"
         elif "core-node-not-found" in response.text:
-            return "Not Found"
+            return "Not available"
         else:
-            return f"Error {response.status_code}"
-    except Exception as e:
-        return f"Error: {str(e)}"
+            return "Error"
+    except Exception:
+        return "Error"
 
-# Loop through all forums
 for region, config in regions.items():
     for code in config["country_codes"]:
         for key, info in series_info.items():
@@ -54,21 +55,25 @@ for region, config in regions.items():
                 series_code=info["series_code"]
             )
             status = check_forum(url)
-            if "Live" in status:
-                active_results.append({
-                    "series": key,
-                    "region": region.upper(),
-                    "country": code.upper(),
-                    "url": url,
-                    "status": status
-                })
+            results.append({
+                "series": key,
+                "region": region.upper(),
+                "country": code.upper(),
+                "url": url,
+                "status": status
+            })
 
-# Write only active forums to file
-with open("active_forums.txt", "w", encoding="utf-8") as f:
-    if active_results:
-        for r in active_results:
-            f.write(f"[{r['region']}/{r['country']}/{r['series']}] {r['url']} --> {r['status']}\n")
-    else:
-        f.write("No active forums found.\n")
+# Write summary to README.md
+with open("README.md", "w", encoding="utf-8") as f:
+    f.write("# Samsung Beta Forums Status\n\n")
+    for r in results:
+        if r["status"] == "Live":
+            line = f"{r['series']}({r['country']}) ----> [Live]({r['url']})\n"
+        elif r["status"] == "Live (No Posts)":
+            # You can decide whether to hyperlink or not here; example below with hyperlink and "No Posts"
+            line = f"{r['series']}({r['country']}) ----> [Live (No Posts)]({r['url']})\n"
+        else:
+            line = f"{r['series']}({r['country']}) ----> Not available\n"
+        f.write(line)
 
-print("Filtered forum check completed.")
+print("README.md updated with forum status.")

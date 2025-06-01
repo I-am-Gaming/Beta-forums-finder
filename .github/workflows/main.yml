@@ -2,7 +2,11 @@ name: Samsung Beta Forums Monitor
 
 on:
   schedule:
-    - cron: '0 8,20 * * *'  # Runs at 08:00 and 20:00 UTC every day
+    - cron: '30 2 * * *'   # 8:00 AM IST
+    - cron: '30 6 * * *'   # 12:00 PM IST
+    - cron: '30 10 * * *'  # 4:00 PM IST
+    - cron: '30 12 * * *'  # 6:00 PM IST
+    - cron: '30 16 * * *'  # 10:00 PM IST
 
 jobs:
   check-forums:

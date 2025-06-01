@@ -1,13 +1,13 @@
 name: Check Samsung Beta Forums
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Manual trigger
   schedule:
-    - cron: '40 2 * * *'
-    - cron: '40 6 * * *'
-    - cron: '40 10 * * *'
-    - cron: '40 12 * * *'
-    - cron: '40 16 * * *'
+    - cron: '40 2 * * *'   # 08:10 IST
+    - cron: '40 6 * * *'   # 12:10 IST
+    - cron: '40 10 * * *'  # 16:10 IST
+    - cron: '40 12 * * *'  # 18:10 IST
+    - cron: '40 16 * * *'  # 22:10 IST
 
 jobs:
   check-forums:
@@ -28,9 +28,16 @@ jobs:
       - name: Run forum checker script
         run: python samsung_forum_checker.py
 
-      - name: Commit updated README.md
+      - name: Commit updated README.md (if changed)
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git diff --quiet && echo "No changes" || (git commit -m "Update README with forum status" && git push)
+          git fetch
+          git pull
+          if git diff --quiet README.md; then
+            echo "No changes to commit."
+          else
+            git add README.md
+            git commit -m "Update README.md with latest forum status"
+            git push
+          fi

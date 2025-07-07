@@ -2,7 +2,7 @@
 
 | Device | Region | Status |
 |--------|--------|--------|
-| S24 | UK | [Live](https://eu.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/uk-bp-stwentyfour) |
+| S24 | UK | Not Available |
 | S23 | UK | [Live](https://eu.community.samsung.com/t5/S23-S23-S23-Ultra/ct-p/uk-bp-stwentythree) |
 | S22 | UK | Not Available |
 | S24 | DE | [Live](https://eu.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/de-bp-stwentyfour) |

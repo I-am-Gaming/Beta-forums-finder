@@ -51,7 +51,7 @@ def check_forum(url):
             elif posts:
                 return "Live - Has Posts"
             else:
-                return "Live - No Posts"
+                return "Live"
 
         elif "core-node-not-found" in response.text:
             return "Not Found"

@@ -24,7 +24,16 @@ regions = {
 series_info = {
     "S24": {"series": "S24-S24-S24-Ultra", "series_code": "stwentyfour"},
     "S23": {"series": "S23-S23-S23-Ultra", "series_code": "stwentythree"},
-    "S22": {"series": "S22-S22-S22-Ultra", "series_code": "stwentytwo"}
+    "S22": {"series": "S22-S22-S22-Ultra", "series_code": "stwentytwo"},
+    "A56": {"series": "Galaxy-A56-5G", "series_code": "afiftysix"},
+    "A55": {"series": "Galaxy-A55-5G", "series_code": "afiftyfive"},
+    "A54": {"series": "Galaxy-A54-5G", "series_code": "afiftyfour"},
+    "A36": {"series": "Galaxy-A36-5G", "series_code": "athirtysix"},
+    "A35": {"series": "Galaxy-A35-5G", "series_code": "athirtyfive"},
+    "ZFold6": {"series": "Z-Fold6", "series_code": "zfoldsix"},
+    "ZFlip6": {"series": "Z-Flip6", "series_code": "zflipsix"},
+    "ZFold5": {"series": "Z-Fold5", "series_code": "zfoldfive"},
+    "ZFlip5": {"series": "Z-Flip5", "series_code": "zflip5"}
 }
 
 # Store markdown table rows
@@ -36,7 +45,14 @@ def check_forum(url):
         if response.status_code == 200:
             soup = BeautifulSoup(response.text, "html.parser")
             posts = soup.select("div.message-subject")
-            return "Live - Has Posts" if posts else "Live - No Posts"
+
+            if "No new messages" in response.text:
+                return "Live - Newly Created"
+            elif posts:
+                return "Live - Has Posts"
+            else:
+                return "Live - No Posts"
+
         elif "core-node-not-found" in response.text:
             return "Not Found"
         else:
@@ -57,7 +73,7 @@ for region, config in regions.items():
             region_label = code.upper()
 
             if status.startswith("Live"):
-                markdown_lines.append(f"| {key} | {region_label} | [Live]({url}) |")
+                markdown_lines.append(f"| {key} | {region_label} | [{status}]({url}) |")
             else:
                 markdown_lines.append(f"| {key} | {region_label} | Not Available |")
 

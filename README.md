@@ -13,7 +13,7 @@
 | ZFold6 | UK | [Live](https://eu.community.samsung.com/t5/Z-Fold6/ct-p/uk-bp-zfoldsix) |
 | ZFlip6 | UK | [Live](https://eu.community.samsung.com/t5/Z-Flip6/ct-p/uk-bp-zflipsix) |
 | ZFold5 | UK | [Live](https://eu.community.samsung.com/t5/Z-Fold5/ct-p/uk-bp-zfoldfive) |
-| ZFlip5 | UK | Not Available |
+| ZFlip5 | UK | [Live](https://eu.community.samsung.com/t5/Z-Flip5/ct-p/uk-bp-zflipfive) |
 | S24 | DE | [Live](https://eu.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/de-bp-stwentyfour) |
 | S23 | DE | [Live](https://eu.community.samsung.com/t5/S23-S23-S23-Ultra/ct-p/de-bp-stwentythree) |
 | S22 | DE | Not Available |
@@ -73,4 +73,4 @@
 | ZFold6 | US | [Live](https://us.community.samsung.com/t5/Z-Fold6/ct-p/us-bp-zfoldsix) |
 | ZFlip6 | US | [Live](https://us.community.samsung.com/t5/Z-Flip6/ct-p/us-bp-zflipsix) |
 | ZFold5 | US | [Live](https://us.community.samsung.com/t5/Z-Fold5/ct-p/us-bp-zfoldfive) |
-| ZFlip5 | US | Not Available |
+| ZFlip5 | US | [Live](https://us.community.samsung.com/t5/Z-Flip5/ct-p/us-bp-zflipfive) |

@@ -33,7 +33,7 @@ series_info = {
     "ZFold6": {"series": "Z-Fold6", "series_code": "zfoldsix"},
     "ZFlip6": {"series": "Z-Flip6", "series_code": "zflipsix"},
     "ZFold5": {"series": "Z-Fold5", "series_code": "zfoldfive"},
-    "ZFlip5": {"series": "Z-Flip5", "series_code": "zflip5"}
+    "ZFlip5": {"series": "Z-Flip5", "series_code": "zflipfive"}
 }
 
 # Store markdown table rows

@@ -51,7 +51,7 @@
 | ZFold5 | KR | Not Available |
 | ZFlip5 | KR | Not Available |
 | S24 | IN | [Live](https://r2.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/in-bp-stwentyfour) |
-| S23 | IN | [Live](https://r2.community.samsung.com/t5/S23-S23-S23-Ultra/ct-p/in-bp-stwentythree) |
+| S23 | IN | Not Available |
 | S22 | IN | Not Available |
 | A56 | IN | Not Available |
 | A55 | IN | [Live](https://r2.community.samsung.com/t5/Galaxy-A55-5G/ct-p/in-bp-afiftyfive) |

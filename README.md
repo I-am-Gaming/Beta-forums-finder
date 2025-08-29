@@ -55,9 +55,9 @@
 | S22 | IN | Not Available |
 | A56 | IN | Not Available |
 | A55 | IN | [Live](https://r2.community.samsung.com/t5/Galaxy-A55-5G/ct-p/in-bp-afiftyfive) |
-| A54 | IN | Not Available |
+| A54 | IN | [Live](https://r2.community.samsung.com/t5/Galaxy-A54-5G/ct-p/in-bp-afiftyfour) |
 | A36 | IN | [Live](https://r2.community.samsung.com/t5/Galaxy-A36-5G/ct-p/in-bp-athirtysix) |
-| A35 | IN | Not Available |
+| A35 | IN | [Live](https://r2.community.samsung.com/t5/Galaxy-A35-5G/ct-p/in-bp-athirtyfive) |
 | ZFold6 | IN | [Live](https://r2.community.samsung.com/t5/Z-Fold6/ct-p/in-bp-zfoldsix) |
 | ZFlip6 | IN | Not Available |
 | ZFold5 | IN | Not Available |

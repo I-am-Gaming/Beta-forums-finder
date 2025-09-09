@@ -47,7 +47,7 @@
 | A36 | KR | Not Available |
 | A35 | KR | [Live](https://r1.community.samsung.com/t5/Galaxy-A35-5G/ct-p/kr-bp-athirtyfive) |
 | ZFold6 | KR | [Live](https://r1.community.samsung.com/t5/Z-Fold6/ct-p/kr-bp-zfoldsix) |
-| ZFlip6 | KR | Not Available |
+| ZFlip6 | KR | [Live](https://r1.community.samsung.com/t5/Z-Flip6/ct-p/kr-bp-zflipsix) |
 | ZFold5 | KR | [Live](https://r1.community.samsung.com/t5/Z-Fold5/ct-p/kr-bp-zfoldfive) |
 | ZFlip5 | KR | [Live](https://r1.community.samsung.com/t5/Z-Flip5/ct-p/kr-bp-zflipfive) |
 | S24 | IN | [Live](https://r2.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/in-bp-stwentyfour) |

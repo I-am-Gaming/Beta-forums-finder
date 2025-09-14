@@ -38,7 +38,7 @@
 | ZFlip6 | PL | Not Available |
 | ZFold5 | PL | Not Available |
 | ZFlip5 | PL | Not Available |
-| S24 | KR | [Live](https://r1.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/kr-bp-stwentyfour) |
+| S24 | KR | Not Available |
 | S23 | KR | [Live](https://r1.community.samsung.com/t5/S23-S23-S23-Ultra/ct-p/kr-bp-stwentythree) |
 | S22 | KR | Not Available |
 | A56 | KR | Not Available |

@@ -43,7 +43,7 @@
 | S22 | KR | Not Available |
 | A56 | KR | Not Available |
 | A55 | KR | [Live](https://r1.community.samsung.com/t5/Galaxy-A55-5G/ct-p/kr-bp-afiftyfive) |
-| A54 | KR | Not Available |
+| A54 | KR | [Live](https://r1.community.samsung.com/t5/Galaxy-A54-5G/ct-p/kr-bp-afiftyfour) |
 | A36 | KR | Not Available |
 | A35 | KR | [Live](https://r1.community.samsung.com/t5/Galaxy-A35-5G/ct-p/kr-bp-athirtyfive) |
 | ZFold6 | KR | [Live](https://r1.community.samsung.com/t5/Z-Fold6/ct-p/kr-bp-zfoldsix) |

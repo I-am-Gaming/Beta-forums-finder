@@ -30,6 +30,8 @@ series_info = {
     "A54": {"series": "Galaxy-A54-5G", "series_code": "afiftyfour"},
     "A36": {"series": "Galaxy-A36-5G", "series_code": "athirtysix"},
     "A35": {"series": "Galaxy-A35-5G", "series_code": "athirtyfive"},
+    "ZFold7": {"series": "Z-Fold7", "series_code": "zfoldseven"},
+    "ZFlip7": {"series": "Z-Flip7", "series_code": "zflipseven"},
     "ZFold6": {"series": "Z-Fold6", "series_code": "zfoldsix"},
     "ZFlip6": {"series": "Z-Flip6", "series_code": "zflipsix"},
     "ZFold5": {"series": "Z-Fold5", "series_code": "zfoldfive"},

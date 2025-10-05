@@ -10,6 +10,8 @@
 | A54 | UK | Not Available |
 | A36 | UK | Not Available |
 | A35 | UK | Not Available |
+| ZFold7 | UK | Not Available |
+| ZFlip7 | UK | Not Available |
 | ZFold6 | UK | [Live](https://eu.community.samsung.com/t5/Z-Fold6/ct-p/uk-bp-zfoldsix) |
 | ZFlip6 | UK | [Live](https://eu.community.samsung.com/t5/Z-Flip6/ct-p/uk-bp-zflipsix) |
 | ZFold5 | UK | [Live](https://eu.community.samsung.com/t5/Z-Fold5/ct-p/uk-bp-zfoldfive) |
@@ -22,6 +24,8 @@
 | A54 | DE | Not Available |
 | A36 | DE | Not Available |
 | A35 | DE | Not Available |
+| ZFold7 | DE | Not Available |
+| ZFlip7 | DE | Not Available |
 | ZFold6 | DE | Not Available |
 | ZFlip6 | DE | Not Available |
 | ZFold5 | DE | Not Available |
@@ -34,6 +38,8 @@
 | A54 | PL | Not Available |
 | A36 | PL | Not Available |
 | A35 | PL | Not Available |
+| ZFold7 | PL | Not Available |
+| ZFlip7 | PL | Not Available |
 | ZFold6 | PL | Not Available |
 | ZFlip6 | PL | Not Available |
 | ZFold5 | PL | Not Available |
@@ -46,6 +52,8 @@
 | A54 | KR | [Live](https://r1.community.samsung.com/t5/Galaxy-A54-5G/ct-p/kr-bp-afiftyfour) |
 | A36 | KR | Not Available |
 | A35 | KR | [Live](https://r1.community.samsung.com/t5/Galaxy-A35-5G/ct-p/kr-bp-athirtyfive) |
+| ZFold7 | KR | Not Available |
+| ZFlip7 | KR | Not Available |
 | ZFold6 | KR | [Live](https://r1.community.samsung.com/t5/Z-Fold6/ct-p/kr-bp-zfoldsix) |
 | ZFlip6 | KR | [Live](https://r1.community.samsung.com/t5/Z-Flip6/ct-p/kr-bp-zflipsix) |
 | ZFold5 | KR | [Live](https://r1.community.samsung.com/t5/Z-Fold5/ct-p/kr-bp-zfoldfive) |
@@ -58,6 +66,8 @@
 | A54 | IN | [Live](https://r2.community.samsung.com/t5/Galaxy-A54-5G/ct-p/in-bp-afiftyfour) |
 | A36 | IN | [Live](https://r2.community.samsung.com/t5/Galaxy-A36-5G/ct-p/in-bp-athirtysix) |
 | A35 | IN | [Live](https://r2.community.samsung.com/t5/Galaxy-A35-5G/ct-p/in-bp-athirtyfive) |
+| ZFold7 | IN | Not Available |
+| ZFlip7 | IN | Not Available |
 | ZFold6 | IN | [Live](https://r2.community.samsung.com/t5/Z-Fold6/ct-p/in-bp-zfoldsix) |
 | ZFlip6 | IN | Not Available |
 | ZFold5 | IN | Not Available |
@@ -70,6 +80,8 @@
 | A54 | US | Not Available |
 | A36 | US | Not Available |
 | A35 | US | Not Available |
+| ZFold7 | US | Not Available |
+| ZFlip7 | US | Not Available |
 | ZFold6 | US | [Live](https://us.community.samsung.com/t5/Z-Fold6/ct-p/us-bp-zfoldsix) |
 | ZFlip6 | US | [Live](https://us.community.samsung.com/t5/Z-Flip6/ct-p/us-bp-zflipsix) |
 | ZFold5 | US | [Live](https://us.community.samsung.com/t5/Z-Fold5/ct-p/us-bp-zfoldfive) |

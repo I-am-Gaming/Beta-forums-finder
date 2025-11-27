@@ -22,6 +22,7 @@ regions = {
 }
 
 series_info = {
+    "S25": {"series": "S25-S25-S25-Ultra", "series_code": "stwentyfive"},
     "S24": {"series": "S24-S24-S24-Ultra", "series_code": "stwentyfour"},
     "S23": {"series": "S23-S23-S23-Ultra", "series_code": "stwentythree"},
     "S22": {"series": "S22-S22-S22-Ultra", "series_code": "stwentytwo"},

@@ -79,7 +79,7 @@
 | ZFlip5 | IN | Not Available |
 | S25 | US | [Live](https://us.community.samsung.com/t5/S25-S25-S25-Ultra/ct-p/us-bp-stwentyfive) |
 | S24 | US | [Live](https://us.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/us-bp-stwentyfour) |
-| S23 | US | Not Available |
+| S23 | US | [Live](https://us.community.samsung.com/t5/S23-S23-S23-Ultra/ct-p/us-bp-stwentythree) |
 | S22 | US | [Live](https://us.community.samsung.com/t5/S22-S22-S22-Ultra/ct-p/us-bp-stwentytwo) |
 | A56 | US | Not Available |
 | A55 | US | Not Available |

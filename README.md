@@ -62,18 +62,18 @@
 | ZFlip6 | KR | [Live](https://r1.community.samsung.com/t5/Z-Flip6/ct-p/kr-bp-zflipsix) |
 | ZFold5 | KR | [Live](https://r1.community.samsung.com/t5/Z-Fold5/ct-p/kr-bp-zfoldfive) |
 | ZFlip5 | KR | [Live](https://r1.community.samsung.com/t5/Z-Flip5/ct-p/kr-bp-zflipfive) |
-| S25 | IN | [Live](https://r2.community.samsung.com/t5/S25-S25-S25-Ultra/ct-p/in-bp-stwentyfive) |
-| S24 | IN | [Live](https://r2.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/in-bp-stwentyfour) |
-| S23 | IN | [Live](https://r2.community.samsung.com/t5/S23-S23-S23-Ultra/ct-p/in-bp-stwentythree) |
+| S25 | IN | Not Available |
+| S24 | IN | Not Available |
+| S23 | IN | Not Available |
 | S22 | IN | Not Available |
 | A56 | IN | Not Available |
-| A55 | IN | [Live](https://r2.community.samsung.com/t5/Galaxy-A55-5G/ct-p/in-bp-afiftyfive) |
-| A54 | IN | [Live](https://r2.community.samsung.com/t5/Galaxy-A54-5G/ct-p/in-bp-afiftyfour) |
-| A36 | IN | [Live](https://r2.community.samsung.com/t5/Galaxy-A36-5G/ct-p/in-bp-athirtysix) |
-| A35 | IN | [Live](https://r2.community.samsung.com/t5/Galaxy-A35-5G/ct-p/in-bp-athirtyfive) |
+| A55 | IN | Not Available |
+| A54 | IN | Not Available |
+| A36 | IN | Not Available |
+| A35 | IN | Not Available |
 | ZFold7 | IN | Not Available |
 | ZFlip7 | IN | Not Available |
-| ZFold6 | IN | [Live](https://r2.community.samsung.com/t5/Z-Fold6/ct-p/in-bp-zfoldsix) |
+| ZFold6 | IN | Not Available |
 | ZFlip6 | IN | Not Available |
 | ZFold5 | IN | Not Available |
 | ZFlip5 | IN | Not Available |

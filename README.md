@@ -11,6 +11,14 @@
 | A54 | UK | Not Available |
 | A36 | UK | Not Available |
 | A35 | UK | Not Available |
+| TriFold(1) | UK | Not Available |
+| TriFold(2) | UK | Not Available |
+| TriFold(3) | UK | Not Available |
+| TriFold(4) | UK | Not Available |
+| TriFold(5) | UK | Not Available |
+| TriFold(6) | UK | Not Available |
+| TriFold(7) | UK | Not Available |
+| TriFold(8) | UK | Not Available |
 | ZFold7 | UK | Not Available |
 | ZFlip7 | UK | Not Available |
 | ZFold6 | UK | [Live](https://eu.community.samsung.com/t5/Z-Fold6/ct-p/uk-bp-zfoldsix) |
@@ -26,6 +34,14 @@
 | A54 | DE | Not Available |
 | A36 | DE | Not Available |
 | A35 | DE | Not Available |
+| TriFold(1) | DE | Not Available |
+| TriFold(2) | DE | Not Available |
+| TriFold(3) | DE | Not Available |
+| TriFold(4) | DE | Not Available |
+| TriFold(5) | DE | Not Available |
+| TriFold(6) | DE | Not Available |
+| TriFold(7) | DE | Not Available |
+| TriFold(8) | DE | Not Available |
 | ZFold7 | DE | Not Available |
 | ZFlip7 | DE | Not Available |
 | ZFold6 | DE | Not Available |
@@ -41,6 +57,14 @@
 | A54 | PL | Not Available |
 | A36 | PL | Not Available |
 | A35 | PL | Not Available |
+| TriFold(1) | PL | Not Available |
+| TriFold(2) | PL | Not Available |
+| TriFold(3) | PL | Not Available |
+| TriFold(4) | PL | Not Available |
+| TriFold(5) | PL | Not Available |
+| TriFold(6) | PL | Not Available |
+| TriFold(7) | PL | Not Available |
+| TriFold(8) | PL | Not Available |
 | ZFold7 | PL | Not Available |
 | ZFlip7 | PL | Not Available |
 | ZFold6 | PL | Not Available |
@@ -56,6 +80,14 @@
 | A54 | KR | [Live](https://r1.community.samsung.com/t5/Galaxy-A54-5G/ct-p/kr-bp-afiftyfour) |
 | A36 | KR | Not Available |
 | A35 | KR | [Live](https://r1.community.samsung.com/t5/Galaxy-A35-5G/ct-p/kr-bp-athirtyfive) |
+| TriFold(1) | KR | Not Available |
+| TriFold(2) | KR | Not Available |
+| TriFold(3) | KR | Not Available |
+| TriFold(4) | KR | Not Available |
+| TriFold(5) | KR | Not Available |
+| TriFold(6) | KR | Not Available |
+| TriFold(7) | KR | Not Available |
+| TriFold(8) | KR | Not Available |
 | ZFold7 | KR | [Live](https://r1.community.samsung.com/t5/Z-Fold7/ct-p/kr-bp-zfoldseven) |
 | ZFlip7 | KR | [Live](https://r1.community.samsung.com/t5/Z-Flip7/ct-p/kr-bp-zflipseven) |
 | ZFold6 | KR | [Live](https://r1.community.samsung.com/t5/Z-Fold6/ct-p/kr-bp-zfoldsix) |
@@ -71,6 +103,14 @@
 | A54 | IN | Not Available |
 | A36 | IN | Not Available |
 | A35 | IN | Not Available |
+| TriFold(1) | IN | Not Available |
+| TriFold(2) | IN | Not Available |
+| TriFold(3) | IN | Not Available |
+| TriFold(4) | IN | Not Available |
+| TriFold(5) | IN | Not Available |
+| TriFold(6) | IN | Not Available |
+| TriFold(7) | IN | Not Available |
+| TriFold(8) | IN | Not Available |
 | ZFold7 | IN | Not Available |
 | ZFlip7 | IN | Not Available |
 | ZFold6 | IN | Not Available |
@@ -86,6 +126,14 @@
 | A54 | US | Not Available |
 | A36 | US | Not Available |
 | A35 | US | Not Available |
+| TriFold(1) | US | Not Available |
+| TriFold(2) | US | Not Available |
+| TriFold(3) | US | Not Available |
+| TriFold(4) | US | Not Available |
+| TriFold(5) | US | Not Available |
+| TriFold(6) | US | Not Available |
+| TriFold(7) | US | Not Available |
+| TriFold(8) | US | Not Available |
 | ZFold7 | US | Not Available |
 | ZFlip7 | US | Not Available |
 | ZFold6 | US | [Live](https://us.community.samsung.com/t5/Z-Fold6/ct-p/us-bp-zfoldsix) |

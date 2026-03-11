@@ -2,24 +2,24 @@
 
 | Device | Region | Status |
 |--------|--------|--------|
-| S25 | UK | [Live](https://eu.community.samsung.com/t5/S25-S25-S25-Ultra/ct-p/uk-bp-stwentyfive) |
-| S24 | UK | [Live](https://eu.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/uk-bp-stwentyfour) |
-| S23 | UK | [Live](https://eu.community.samsung.com/t5/S23-S23-S23-Ultra/ct-p/uk-bp-stwentythree) |
+| S25 | UK | Not Available |
+| S24 | UK | Not Available |
+| S23 | UK | Not Available |
 | S22 | UK | Not Available |
 | A56 | UK | Not Available |
 | A55 | UK | Not Available |
 | A54 | UK | Not Available |
 | A36 | UK | Not Available |
 | A35 | UK | Not Available |
-| ZFold7 | UK | [Live](https://eu.community.samsung.com/t5/Z-Fold7/ct-p/uk-bp-zfoldseven) |
-| ZFlip7 | UK | [Live](https://eu.community.samsung.com/t5/Z-Flip7/ct-p/uk-bp-zflipseven) |
-| ZFold6 | UK | [Live](https://eu.community.samsung.com/t5/Z-Fold6/ct-p/uk-bp-zfoldsix) |
-| ZFlip6 | UK | [Live](https://eu.community.samsung.com/t5/Z-Flip6/ct-p/uk-bp-zflipsix) |
-| ZFold5 | UK | [Live](https://eu.community.samsung.com/t5/Z-Fold5/ct-p/uk-bp-zfoldfive) |
-| ZFlip5 | UK | [Live](https://eu.community.samsung.com/t5/Z-Flip5/ct-p/uk-bp-zflipfive) |
-| S25 | DE | [Live](https://eu.community.samsung.com/t5/S25-S25-S25-Ultra/ct-p/de-bp-stwentyfive) |
-| S24 | DE | [Live](https://eu.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/de-bp-stwentyfour) |
-| S23 | DE | [Live](https://eu.community.samsung.com/t5/S23-S23-S23-Ultra/ct-p/de-bp-stwentythree) |
+| ZFold7 | UK | Not Available |
+| ZFlip7 | UK | Not Available |
+| ZFold6 | UK | Not Available |
+| ZFlip6 | UK | Not Available |
+| ZFold5 | UK | Not Available |
+| ZFlip5 | UK | Not Available |
+| S25 | DE | Not Available |
+| S24 | DE | Not Available |
+| S23 | DE | Not Available |
 | S22 | DE | Not Available |
 | A56 | DE | Not Available |
 | A55 | DE | Not Available |
@@ -32,8 +32,8 @@
 | ZFlip6 | DE | Not Available |
 | ZFold5 | DE | Not Available |
 | ZFlip5 | DE | Not Available |
-| S25 | PL | [Live](https://eu.community.samsung.com/t5/S25-S25-S25-Ultra/ct-p/pl-bp-stwentyfive) |
-| S24 | PL | [Live](https://eu.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/pl-bp-stwentyfour) |
+| S25 | PL | Not Available |
+| S24 | PL | Not Available |
 | S23 | PL | Not Available |
 | S22 | PL | Not Available |
 | A56 | PL | Not Available |

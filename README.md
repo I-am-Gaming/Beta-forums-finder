@@ -1,6 +1,6 @@
 # Samsung Beta Forums Monitor
 
-Last Checked: 2026-03-14 15:17:27
+Last Checked: 2026-03-14 16:59:31
 
 | Device | Region | Status |
 |--------|--------|--------|
@@ -8,7 +8,6 @@ Last Checked: 2026-03-14 15:17:27
 | S25 | UK | [Live](https://eu.community.samsung.com/t5/S25-S25-S25-Ultra/ct-p/uk-bp-stwentyfive) |
 | S24 | UK | [Live](https://eu.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/uk-bp-stwentyfour) |
 | S23 | UK | [Live](https://eu.community.samsung.com/t5/S23-S23-S23-Ultra/ct-p/uk-bp-stwentythree) |
-| S22 | UK | Not Available |
 | A57 | UK | Not Available |
 | A56 | UK | Not Available |
 | A55 | UK | Not Available |
@@ -26,7 +25,6 @@ Last Checked: 2026-03-14 15:17:27
 | S25 | DE | [Live](https://eu.community.samsung.com/t5/S25-S25-S25-Ultra/ct-p/de-bp-stwentyfive) |
 | S24 | DE | [Live](https://eu.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/de-bp-stwentyfour) |
 | S23 | DE | [Live](https://eu.community.samsung.com/t5/S23-S23-S23-Ultra/ct-p/de-bp-stwentythree) |
-| S22 | DE | Not Available |
 | A57 | DE | Not Available |
 | A56 | DE | Not Available |
 | A55 | DE | Not Available |
@@ -44,7 +42,6 @@ Last Checked: 2026-03-14 15:17:27
 | S25 | PL | [Live](https://eu.community.samsung.com/t5/S25-S25-S25-Ultra/ct-p/pl-bp-stwentyfive) |
 | S24 | PL | [Live](https://eu.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/pl-bp-stwentyfour) |
 | S23 | PL | Not Available |
-| S22 | PL | Not Available |
 | A57 | PL | Not Available |
 | A56 | PL | Not Available |
 | A55 | PL | Not Available |
@@ -62,7 +59,6 @@ Last Checked: 2026-03-14 15:17:27
 | S25 | KR | [Live](https://r1.community.samsung.com/t5/S25-S25-S25-Ultra/ct-p/kr-bp-stwentyfive) |
 | S24 | KR | [Live](https://r1.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/kr-bp-stwentyfour) |
 | S23 | KR | [Live](https://r1.community.samsung.com/t5/S23-S23-S23-Ultra/ct-p/kr-bp-stwentythree) |
-| S22 | KR | Not Available |
 | A57 | KR | Not Available |
 | A56 | KR | Not Available |
 | A55 | KR | [Live](https://r1.community.samsung.com/t5/Galaxy-A55-5G/ct-p/kr-bp-afiftyfive) |
@@ -80,7 +76,6 @@ Last Checked: 2026-03-14 15:17:27
 | S25 | IN | [Live](https://r2.community.samsung.com/t5/S25-S25-S25-Ultra/ct-p/in-bp-stwentyfive) |
 | S24 | IN | [Live](https://r2.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/in-bp-stwentyfour) |
 | S23 | IN | [Live](https://r2.community.samsung.com/t5/S23-S23-S23-Ultra/ct-p/in-bp-stwentythree) |
-| S22 | IN | Not Available |
 | A57 | IN | Not Available |
 | A56 | IN | Not Available |
 | A55 | IN | [Live](https://r2.community.samsung.com/t5/Galaxy-A55-5G/ct-p/in-bp-afiftyfive) |
@@ -98,7 +93,6 @@ Last Checked: 2026-03-14 15:17:27
 | S25 | US | [Live](https://us.community.samsung.com/t5/S25-S25-S25-Ultra/ct-p/us-bp-stwentyfive) |
 | S24 | US | [Live](https://us.community.samsung.com/t5/S24-S24-S24-Ultra/ct-p/us-bp-stwentyfour) |
 | S23 | US | [Live](https://us.community.samsung.com/t5/S23-S23-S23-Ultra/ct-p/us-bp-stwentythree) |
-| S22 | US | [Live](https://us.community.samsung.com/t5/S22-S22-S22-Ultra/ct-p/us-bp-stwentytwo) |
 | A57 | US | Not Available |
 | A56 | US | Not Available |
 | A55 | US | Not Available |

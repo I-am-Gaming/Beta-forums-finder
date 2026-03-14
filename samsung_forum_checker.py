@@ -27,7 +27,6 @@ series_info = {
     "S25": {"series": "S25-S25-S25-Ultra", "series_code": "stwentyfive"},
     "S24": {"series": "S24-S24-S24-Ultra", "series_code": "stwentyfour"},
     "S23": {"series": "S23-S23-S23-Ultra", "series_code": "stwentythree"},
-    "S22": {"series": "S22-S22-S22-Ultra", "series_code": "stwentytwo"},
     "A57": {"series": "Galaxy-A57-5G", "series_code": "afiftyseven"},
     "A56": {"series": "Galaxy-A56-5G", "series_code": "afiftysix"},
     "A55": {"series": "Galaxy-A55-5G", "series_code": "afiftyfive"},

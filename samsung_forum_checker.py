@@ -43,19 +43,19 @@ device_info = {
     "S25 series": {"series": "S25-S25-S25-Ultra", "series_code": "stwentyfive"},
     "S24 series": {"series": "S24-S24-S24-Ultra", "series_code": "stwentyfour"},
     "S23 series": {"series": "S23-S23-S23-Ultra", "series_code": "stwentythree"},
-    "A57 series": {"series": "Galaxy-A57-5G", "series_code": "afiftyseven"},
-    "A56": {"series": "Galaxy-A56-5G", "series_code": "afiftysix"},
-    "A55": {"series": "Galaxy-A55-5G", "series_code": "afiftyfive"},
-    "A54": {"series": "Galaxy-A54-5G", "series_code": "afiftyfour"},
-    "A37": {"series": "Galaxy-A37-5G", "series_code": "athirtyseven"},
-    "A36": {"series": "Galaxy-A36-5G", "series_code": "athirtysix"},
-    "A35": {"series": "Galaxy-A35-5G", "series_code": "athirtyfive"},
-    "ZFold7": {"series": "Z-Fold7", "series_code": "zfoldseven"},
-    "ZFlip7": {"series": "Z-Flip7", "series_code": "zflipseven"},
-    "ZFold6": {"series": "Z-Fold6", "series_code": "zfoldsix"},
-    "ZFlip6": {"series": "Z-Flip6", "series_code": "zflipsix"},
-    "ZFold5": {"series": "Z-Fold5", "series_code": "zfoldfive"},
-    "ZFlip5": {"series": "Z-Flip5", "series_code": "zflipfive"}
+    "Galaxy A57": {"series": "Galaxy-A57-5G", "series_code": "afiftyseven"},
+    "Galaxy A56": {"series": "Galaxy-A56-5G", "series_code": "afiftysix"},
+    "Galaxy A55": {"series": "Galaxy-A55-5G", "series_code": "afiftyfive"},
+    "Galaxy A54": {"series": "Galaxy-A54-5G", "series_code": "afiftyfour"},
+    "Galaxy A37": {"series": "Galaxy-A37-5G", "series_code": "athirtyseven"},
+    "Galaxy A36": {"series": "Galaxy-A36-5G", "series_code": "athirtysix"},
+    "Galaxy A35": {"series": "Galaxy-A35-5G", "series_code": "athirtyfive"},
+    "Galaxy ZFold 7": {"series": "Z-Fold7", "series_code": "zfoldseven"},
+    "Galaxy ZFlip 7": {"series": "Z-Flip7", "series_code": "zflipseven"},
+    "Galaxy ZFold 6": {"series": "Z-Fold6", "series_code": "zfoldsix"},
+    "Galaxy ZFlip 6": {"series": "Z-Flip6", "series_code": "zflipsix"},
+    "Galaxy ZFold 5": {"series": "Z-Fold5", "series_code": "zfoldfive"},
+    "Galaxy ZFlip 5": {"series": "Z-Flip5", "series_code": "zflipfive"}
 }
 
 def send_telegram_msg(text):

@@ -23,7 +23,7 @@ jobs:
           python-version: 3.11
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4
+        run: pip install requests pytz
 
       - name: Run forum checker script
         run: python samsung_forum_checker.py

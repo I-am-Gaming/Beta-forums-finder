@@ -1,8 +1,24 @@
 import requests
 import time
 import random
+from datetime import datetime
+import pytz
+import os
+import re
 
-# Configuration preserved from your source files
+# Telegram Bot CONFIG
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+
+country_names = {
+    "UK": "UK🇬🇧",
+    "DE": "Germany🇩🇪",
+    "PL": "Poland🇵🇱",
+    "KR": "Korea🇰🇷",
+    "IN": "India🇮🇳",
+    "US": "US🇺🇸"
+}
+
 regions = {
     "eu": {
         "base_url": "https://eu.community.samsung.com/t5/{series}/ct-p/{country_code}-bp-{series_code}",
@@ -22,12 +38,12 @@ regions = {
     }
 }
 
-series_info = {
-    "S26": {"series": "S26-S26-S26-Ultra", "series_code": "stwentysix"},
-    "S25": {"series": "S25-S25-S25-Ultra", "series_code": "stwentyfive"},
-    "S24": {"series": "S24-S24-S24-Ultra", "series_code": "stwentyfour"},
-    "S23": {"series": "S23-S23-S23-Ultra", "series_code": "stwentythree"},
-    "A57": {"series": "Galaxy-A57-5G", "series_code": "afiftyseven"},
+device_info = {
+    "S26 series": {"series": "S26-S26-S26-Ultra", "series_code": "stwentysix"},
+    "S25 series": {"series": "S25-S25-S25-Ultra", "series_code": "stwentyfive"},
+    "S24 series": {"series": "S24-S24-S24-Ultra", "series_code": "stwentyfour"},
+    "S23 series": {"series": "S23-S23-S23-Ultra", "series_code": "stwentythree"},
+    "A57 series": {"series": "Galaxy-A57-5G", "series_code": "afiftyseven"},
     "A56": {"series": "Galaxy-A56-5G", "series_code": "afiftysix"},
     "A55": {"series": "Galaxy-A55-5G", "series_code": "afiftyfive"},
     "A54": {"series": "Galaxy-A54-5G", "series_code": "afiftyfour"},
@@ -42,6 +58,38 @@ series_info = {
     "ZFlip5": {"series": "Z-Flip5", "series_code": "zflipfive"}
 }
 
+def send_telegram_msg(text):
+    if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+        return
+    url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+    payload = {"chat_id": TELEGRAM_CHAT_ID, "text": text, "parse_mode": "Markdown"}
+    try:
+        requests.post(url, json=payload, timeout=15)
+    except Exception:
+        pass
+
+def get_previous_states():
+    """Returns a dictionary of {device-region: status} from README.md"""
+    states = {}
+    if os.path.exists("README.md"):
+        try:
+            with open("README.md", "r", encoding="utf-8") as f:
+                content = f.read()
+                matches = re.findall(r"\| (.*?) \| (.*?) \| (.*?) \|", content)
+                for device, region, status in matches:
+                    if "Device" in device: continue 
+                    key = f"{device.strip()}-{region.strip()}"
+                    if "[Live]" in status:
+                        clean_status = "Live"
+                    elif "Not Available" in status:
+                        clean_status = "Not Available"
+                    else:
+                        clean_status = "Unknown"
+                    states[key] = clean_status
+        except Exception:
+            pass
+    return states
+
 def get_session():
     session = requests.Session()
     session.headers.update({
@@ -54,16 +102,13 @@ def get_session():
 
 def check_forum(session, url):
     try:
-        # [span_2](start_span)30-second timeout to allow for slow loading[span_2](end_span)
         response = session.get(url, timeout=30, allow_redirects=True)
         final_url = response.url
         page_source = response.text
 
-        # 1. Check for Samsung Account redirection (Restricted/Login required)
         if "account.samsung.com" in final_url:
             return "May be live but can't access"
 
-        # 2. [span_3](start_span)Check for "Not Found" indicators in English and German[span_3](end_span)
         not_found_indicators = [
             "The core node you are trying to access was not found",
             "Der Kernknoten, auf den Sie zugreifen möchten, wurde nicht gefunden",
@@ -73,27 +118,30 @@ def check_forum(session, url):
         if any(indicator in page_source for indicator in not_found_indicators):
             return "Not Available"
 
-        # 3. Check for Live indicators (including empty forums)
         if "No new messages" in page_source or "message-subject" in page_source or response.ok:
             return "Live"
         
         return "Not Available"
-
     except Exception:
         return "Error"
 
 def run():
+    previous_states = get_previous_states()
     session = get_session()
+    
+    ist = pytz.timezone('Asia/Kolkata')
+    current_time_ist = datetime.now(ist).strftime('%Y-%m-%d %H:%M:%S')
+    
     markdown_lines = [
         "# Samsung Beta Forums Monitor\n",
-        f"Last Checked: {time.strftime('%Y-%m-%d %H:%M:%S')}\n",
+        f"**Last Checked:** {current_time_ist} IST\n",
         "| Device | Region | Status |",
         "|--------|--------|--------|"
     ]
 
     for reg_name, config in regions.items():
         for code in config["country_codes"]:
-            for device, info in series_info.items():
+            for device, info in device_info.items():
                 url = config["base_url"].format(
                     series=info["series"],
                     country_code=code,
@@ -101,20 +149,32 @@ def run():
                 )
                 
                 status = check_forum(session, url)
-                print(f"Checking {device:6} ({code.upper()}): {status}")
+                region_upper = code.upper()
+                state_key = f"{device}-{region_upper}"
+                country = country_names.get(region_upper, region_upper)
                 
-                # [span_4](start_span)Update Markdown table logic[span_4](end_span)
+                # --- TELEGRAM TRIGGER LOGIC ---
+                if state_key in previous_states:
+                    old_status = previous_states[state_key]
+                    
+                    if status == "Live" and old_status == "Not Available":
+                        send_telegram_msg(f"🚀 *{device} Beta Forum* now live in *{country}*!")
+                    
+                    elif status == "Not Available" and old_status == "Live":
+                        send_telegram_msg(f"🔴 *{device} Beta Forum* removed from *{country}*")
+
+                # --- BUILD MARKDOWN ---
                 if status == "Live":
-                    markdown_lines.append(f"| {device} | {code.upper()} | [Live]({url}) |")
+                    markdown_lines.append(f"| {device} | {region_upper} | [Live]({url}) |")
                 elif status == "May be live but can't access":
-                    markdown_lines.append(f"| {device} | {code.upper()} | [Restricted Access]({url}) |")
+                    markdown_lines.append(f"| {device} | {region_upper} | [Restricted Access]({url}) |")
                 else:
-                    markdown_lines.append(f"| {device} | {code.upper()} | Not Available |")
+                    markdown_lines.append(f"| {device} | {region_upper} | Not Available |")
 
     with open("README.md", "w", encoding="utf-8") as f:
         f.write("\n".join(markdown_lines))
     
-    print("\nREADME.md updated.")
+    print(f"\nUpdate complete at {current_time_ist} IST.")
 
 if __name__ == "__main__":
     run()
